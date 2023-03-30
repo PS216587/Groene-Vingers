@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/Jelle', function () {
+Route::get('/jelle', function () {
     return view('Jelle');
 });
 
