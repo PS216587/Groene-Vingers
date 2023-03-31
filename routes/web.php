@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ComingSoonController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,6 +18,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/howsoon', [ComingSoonController::class, "index"])->name("ComingSoon.howsoon");
+Route::get('/about', [ComingSoonController::class, "index"])->name("ComingSoon.about");
+Route::get('/contact', [ComingSoonController::class, "index"])->name("ComingSoon.contact");
 
 Route::get('/jelle', function () {
     return view('Jelle');
