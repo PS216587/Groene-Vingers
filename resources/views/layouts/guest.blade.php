@@ -19,7 +19,7 @@
     <body class="font-sans text-gray-900 antialiased">
     {{-- <x-guest-navigation></x-guest-navigation> --}}
         <div class="min-h-screen bg-[#7199ff] flex items-center justify-center">
-            <div class="w-[900px] h-[600px] sm:rounded-lg">
+            <div class="w-[1000px] h-[700px] sm:rounded-lg">
                 <div class="bg-white h-full w-full rounded-xl shadow-xl">
                     {{ $slot }}
                 </div>

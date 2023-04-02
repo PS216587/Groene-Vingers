@@ -15,9 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('howsoon');
+// });
+
+Route::get('/', [ComingSoonController::class, "index"])->name("ComingSoon.howsoon");
 
 Route::get('/howsoon', [ComingSoonController::class, "index"])->name("ComingSoon.howsoon");
 Route::get('/about', [ComingSoonController::class, "index"])->name("ComingSoon.about");
@@ -37,4 +39,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
