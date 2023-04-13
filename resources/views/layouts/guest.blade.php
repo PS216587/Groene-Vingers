@@ -22,17 +22,18 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
     <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css" />
     {{-- <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script> --}}
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body class="font-sans text-gray-900 antialiased bg-green-600">
-    {{-- <x-guest-navigation></x-guest-navigation> --}}
+    <x-guest-navigation></x-guest-navigation>
+
 
     <div class="flex justify-center py-0 sm:py-[5rem] @if ($random == 88) bg-red-500 @endif ">
         <div class="sm:w-[65rem] w-screen sm:rounded-lg">
-            <div class="bg-white p-8 sm:rounded-xl shadow-xl animate-[spin_50000s_infinite]">
+            <div class="bg-white p-8 sm:rounded-xl shadow-xl animate-[spin_500000s_infinite]">
                 {{ $slot }}
             </div>
         </div>
