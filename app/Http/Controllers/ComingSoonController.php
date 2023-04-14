@@ -6,8 +6,10 @@ use Illuminate\Http\Request;
 
 class ComingSoonController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        return view('ComingSoon.index');
+        $KuinController = new KuinApiController();
+        $response = $KuinController->get_request($request);
+        return view('ComingSoon.index', ['result' => $response]);
     }
 }

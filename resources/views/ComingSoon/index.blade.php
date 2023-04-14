@@ -1,4 +1,11 @@
 <x-guest-layout>
+    {{ $result }}
+    <form action="">
+        {{-- <input type="number" name="item_id" id="item_id" inputmode="numeric" pattern="[0-9]+"> --}}
+        <input type="number" name="item_id" id="item_id" inputmode="numeric"
+            class="[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none" />
+        <button type="submit" class="btn-primary">submit</button>
+    </form>
     <img src="{{ asset('img/Groene Vingers Logo.png') }}" alt="" class="ml-8 h-16">
     <div class="flex pt-4 pl-8 space-x-6 text-lg">
         <a href="{{ route('ComingSoon.howsoon') }}">
